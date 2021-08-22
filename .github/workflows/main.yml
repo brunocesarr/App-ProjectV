@@ -15,19 +15,19 @@ jobs:
   sonarcloud:
     runs-on: ubuntu-latest
     steps:
-    - uses: actions/checkout@v2
-      with:
-        fetch-depth: 0
-    - name: Get Branch
-      run: git fetch
-    - name: Install dependencies
-      run:  npm install
-    - name: Install Jest globally
-      run:  sudo npm install -g jest
-    - name: Run Tests
-      run:  npm run test:coverage
-    - name: SonarCloud Scan
-      uses: sonarsource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0  # Shallow clones should be disabled for a better relevancy of analysis
+      - name: Get Branch
+        run: git fetch
+      - name: Install dependencies
+        run:  npm install
+      - name: Install Jest globally
+        run:  sudo npm install -g jest
+      - name: Run Tests
+        run:  npm run test:coverage
+      - name: SonarCloud Scan
+        uses: sonarsource/sonarcloud-github-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
