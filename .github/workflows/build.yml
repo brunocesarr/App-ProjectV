@@ -4,7 +4,9 @@ on:
     branches:
       - master
       - develop
-      - *
+      - 'feature/*'
+      - 'release/*'
+      - 'hotfix/*'
   pull_request:
     types: [opened, synchronize, reopened]
 jobs:
