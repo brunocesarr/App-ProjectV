@@ -1,6 +1,6 @@
 import React from 'react';
 import {Text} from 'react-native';
 
-export function Home() {
-  return <Text>Olá</Text>;
+export function HomeScreen() {
+  return <Text>Olá Teste</Text>;
 }
