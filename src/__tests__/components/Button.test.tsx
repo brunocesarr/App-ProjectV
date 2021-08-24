@@ -4,8 +4,6 @@ import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 import {Button} from '../../components';
 
-jest.mock('react-native-gesture-handler', () => {});
-
 it('renders correctly', async () => {
   //#region Setup
   const onPress = jest.fn();
