@@ -2,23 +2,23 @@ import 'react-native';
 import React from 'react';
 
 import {render} from '@testing-library/react-native';
-import {Section} from '../../components';
+import {HomeScreen} from '../../screens';
 
 jest.useFakeTimers();
 
-describe('Section Component', () => {
+describe('Home Screen', () => {
   it('renders correctly', async () => {
     //#region Setup
-    const titleSection = 'Test Button';
-    const section = render(<Section title={titleSection} />);
+    const titleHome = 'Home';
+    const section = render(<HomeScreen />);
     //#endregion
 
     //#region Act
-    const testSection = section.getByText(titleSection);
+    const testHomeScreen = section.getByText(titleHome);
     //#endregion
 
     //#region Asserts
-    expect(testSection).toBeTruthy();
+    expect(testHomeScreen).toBeTruthy();
     //#endregion
   });
 });

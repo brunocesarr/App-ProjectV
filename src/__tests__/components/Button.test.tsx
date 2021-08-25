@@ -6,7 +6,7 @@ import {Button} from '../../components';
 
 jest.useFakeTimers();
 
-describe('Button', () => {
+describe('Button Component', () => {
   it('renders correctly', () => {
     //#region Setup
     const onPress = jest.fn();

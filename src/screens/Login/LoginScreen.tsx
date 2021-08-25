@@ -6,12 +6,12 @@ import LogoApp from '../../assets/images/Logo1.png';
 import {useNavigation} from '@react-navigation/core';
 import {StackNavigationProp} from '@react-navigation/stack';
 
-import styles from '../../styles/screens/LoginScreen';
+import styles from '../../styles/screens/Login/styles';
 
 type LoginScreenProps = StackNavigationProp<any, 'Login'>;
 
 export function LoginScreen() {
-  const navigation = useNavigation<LoginScreenProps>();
+  const {navigate} = useNavigation<LoginScreenProps>();
 
   return (
     <View style={styles.container}>
@@ -31,7 +31,7 @@ export function LoginScreen() {
         Mucuri(UFVJM).
       </Text>
 
-      <Button title={'Entrar'} onPress={() => navigation.navigate('Home')} />
+      <Button title={'Entrar'} onPress={() => navigate('Home')} />
     </View>
   );
 }
