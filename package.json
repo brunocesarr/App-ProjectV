@@ -49,12 +49,16 @@
   "jest": {
     "preset": "react-native",
     "setupFilesAfterEnv": [
-      "@testing-library/jest-native/extend-expect",
-      "./node_modules/react-native-gesture-handler/jestSetup.js"
+      "@testing-library/jest-native/extend-expect"
     ],
-    "transformIgnorePatterns": [
-      "node_modules/?!(react-navigation)"
+    "testPathIgnorePatterns": [
+      "<rootDir>/dist/",
+      "<rootDir>/node_modules/"
     ],
+    "transformIgnorePatterns": [ 
+      "node_modules/(?!(jest-)?@?react-native|@react-native-community|@react-navigation)" 
+    ], 
+    "setupFiles": ["<rootDir>/jest/setup.js"],
     "testResultsProcessor": "jest-sonar-reporter",
     "moduleFileExtensions": [
       "ts",

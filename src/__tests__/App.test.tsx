@@ -4,16 +4,23 @@ import App from '../../App';
 
 import {render} from '@testing-library/react-native';
 
-it('renders correctly', () => {
-  //#region Setup
-  const app = render(<App/>);
-  //#endregion
+jest.useFakeTimers();
 
-  //#region Act
-  const textHome = app.getByText(/Project V/i);
-  //#endregion
+describe("App", () => {
+  beforeEach(() => {
+  });
 
-  //#region Asserts
-  expect(textHome).toBeTruthy();
-  //#endregion
+  it('renders correctly', () => {
+    //#region Setup
+    const app = render(<App/>);
+    //#endregion
+  
+    //#region Act
+    const textHome = app.getByText(/Project V/i);
+    //#endregion
+  
+    //#region Asserts
+    expect(textHome).toBeTruthy();
+    //#endregion
+  });  
 });
