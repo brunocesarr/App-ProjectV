@@ -4,8 +4,6 @@ import App from '../../App';
 
 import {render} from '@testing-library/react-native';
 
-jest.useFakeTimers();
-
 describe('App', () => {
   it('renders correctly', () => {
     //#region Setup
@@ -13,7 +11,7 @@ describe('App', () => {
     //#endregion
 
     //#region Act
-    const textHome = app.getByText(/Project V/i);
+    const textHome = app.getByText(/Project V/);
     //#endregion
 
     //#region Asserts

@@ -8,6 +8,8 @@ import {StackNavigationProp} from '@react-navigation/stack';
 
 import styles from '../../styles/screens/Login/styles';
 
+// import {APP_NAME} from '@env';
+
 type LoginScreenProps = StackNavigationProp<any, 'Login'>;
 
 export function LoginScreen() {
@@ -21,6 +23,7 @@ export function LoginScreen() {
         translucent
       />
 
+      {/* <Text style={styles.title}>Project V - {APP_NAME}</Text> */}
       <Text style={styles.title}>Project V</Text>
 
       <Image source={LogoApp} style={styles.image} resizeMode="stretch" />

@@ -4,8 +4,6 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import {Section} from '../../components';
 
-jest.useFakeTimers();
-
 describe('Section Component', () => {
   it('renders correctly', async () => {
     //#region Setup

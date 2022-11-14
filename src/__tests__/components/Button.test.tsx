@@ -4,8 +4,6 @@ import React from 'react';
 import {fireEvent, render} from '@testing-library/react-native';
 import {Button} from '../../components';
 
-jest.useFakeTimers();
-
 describe('Button Component', () => {
   it('renders correctly', () => {
     //#region Setup

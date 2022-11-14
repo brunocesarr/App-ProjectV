@@ -4,8 +4,6 @@ import React from 'react';
 import {render} from '@testing-library/react-native';
 import {HomeScreen} from '../../screens';
 
-jest.useFakeTimers();
-
 describe('Home Screen', () => {
   it('renders correctly', async () => {
     //#region Setup
